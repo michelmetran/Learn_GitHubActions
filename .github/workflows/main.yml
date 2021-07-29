@@ -21,7 +21,7 @@ jobs:
         server-dir: public_html/
         port: 21
         exclude:
-          - **/.git*
-          - **/.git*/**
-          - **/node_modules/**
-          - fileToExclude.txt
+        - **/.git*
+        - **/.git*/**
+        - **/node_modules/**
+        - fileToExclude.txt        
