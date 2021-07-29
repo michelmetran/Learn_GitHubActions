@@ -20,5 +20,5 @@ jobs:
         server-dir: public_html/
         port: 21 # todo replace with your web hosts ftps port
         exclude:
-          - LICENSE
-          - README.md
+        - LICENSE
+        - README.md
