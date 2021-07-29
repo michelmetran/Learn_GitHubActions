@@ -18,6 +18,9 @@ jobs:
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
         server-dir: public_html/
-        exclude:
-          - fileToExclude.txt
         port: 21 # todo replace with your web hosts ftps port
+        exclude:
+          - **/.git*
+          - **/.git*/**
+          - **/node_modules/**
+          - fileToExclude.txt
