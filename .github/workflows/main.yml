@@ -20,9 +20,3 @@ jobs:
         server-dir: public_html/
         port: 21
         exclude: "[**/.git*/**, LICENSE, README.md]" # Funciona!
-        # exclude: '
-        # - **/.git*/**
-        # - LICENSE
-        # - README.md
-        # - README*
-        # '
