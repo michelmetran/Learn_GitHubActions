@@ -20,4 +20,4 @@ jobs:
         server-dir: public_html/
         port: 21
         exclude:
-        - LICENSE
+          - LICENSE
