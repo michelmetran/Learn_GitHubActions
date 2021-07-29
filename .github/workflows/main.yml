@@ -21,5 +21,3 @@ jobs:
         port: 21
         exclude:
         - LICENSE
-        - README.md
-        
