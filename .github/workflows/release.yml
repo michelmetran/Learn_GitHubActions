@@ -23,5 +23,5 @@ jobs:
           prerelease: false
           title: 'Development Build'
           files: |
-            LICEnSE
+            LICENSE
             README.md
