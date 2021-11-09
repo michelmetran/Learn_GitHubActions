@@ -33,3 +33,7 @@ Quando um usuário interagir (criando um *Issue* ou *Pull Request*), receberá u
 <br>
 
 -----
+
+## PyPi
+
+No projeto que fiz, sobre o [gerador_endereco](https://github.com/open-dsa/gerador_endereco) usei um Git Action que cria um pacote no PyPi!, o repositório oficial do Python.
