@@ -22,6 +22,11 @@ jobs:
           automatic_release_tag: "latest"
           prerelease: true
           title: "Development Build"
+          id: "automatic_releases"
           files: |
-            LICENSE
-            README.md
+          LICENSE
+          README.md
+          ftp_action/index.html
+          
+	    
+	  
