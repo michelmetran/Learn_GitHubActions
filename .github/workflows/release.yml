@@ -24,9 +24,7 @@ jobs:
           title: "Development Build"
           id: "automatic_releases"
           files: |
-          LICENSE
-          README.md
-          ftp_action/index.html
-          
-	    
-	  
+            LICENSE
+            README.md
+            ftp_action/index.html
+            
