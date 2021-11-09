@@ -23,8 +23,6 @@ jobs:
           prerelease: false
           title: 'Development Build'
           files: |
-            LICENSE
-            README.md
-            ftp_action/index.html
-            
-          id: 'automatic_releases'
+            LICE*
+            README*
+            ftp_action/*.html
