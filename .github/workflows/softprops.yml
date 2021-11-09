@@ -1,6 +1,6 @@
 # https://github.com/softprops/action-gh-release
 
-name: Main
+name: Create Release
 
 on: push
 
