@@ -20,11 +20,11 @@ jobs:
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
-          prerelease: true
-          title: "Development Build"
-          id: "automatic_releases"
+          prerelease: false
+          title: "Development Build"          
           files: |
             LICENSE
             README.md
             ftp_action/index.html
             
+          id: "automatic_releases"
