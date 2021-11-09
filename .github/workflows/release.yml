@@ -23,6 +23,6 @@ jobs:
           prerelease: false
           title: 'Development Build'
           files: |
-            LICE*
-            README*
-            ftp_action/*.html
+            ./LICE*
+            ./README*
+            ./ftp_action/*.html
