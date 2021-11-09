@@ -6,9 +6,9 @@
 
 O presente repositório visa testar algumas ações ao fazer um *push*, além de outras operações, em repositórios!
 
------
-
 <br>
+
+-----
 
 ## FTP
 
@@ -20,9 +20,9 @@ Ao fazer um *push*, é possível replicar o conteúdo para um **FTP**. Apenas pa
 - [GitHub Action FTP Deploy](https://github.com/marketplace/actions/ftp-deploy)
 - [Site](https://djangotestmiche.000webhostapp.com/)
 
------
-
 <br>
+
+-----
 
 ## First Interaction
 
@@ -30,6 +30,6 @@ Quando um usuário interagir (criando um *Issue* ou *Pull Request*), receberá u
 
 - [GitHub Action First interaction](https://github.com/marketplace/actions/first-interaction)
 
+<br>
+
 -----
-
-
