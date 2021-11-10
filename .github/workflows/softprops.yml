@@ -13,16 +13,13 @@ jobs:
       - name: Delete Release
         # Deletar Release: dai é possível criar uma!
         # https://github.com/dev-drprasad/delete-tag-and-release
-
-      
         uses: dev-drprasad/delete-tag-and-release@v0.2.0
         with:
           delete_release: true # default: false
-          tag_name: 'data' # tag name to delete
+          tag_name: 'v1.0' # tag name to delete
           #repo: <repoOwner>/<repoName> # target repo (optional). defaults to repo running this action
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 
       - name: Checkout
         uses: actions/checkout@v2
@@ -30,8 +27,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/') #
         with:             # Optional
-          name: 'data'
-          body: 'Dados do InfoÁguas obtidos em 25.10.2021'
+          #name: 'data'
+          #body: 'Dados do InfoÁguas obtidos em 25.10.2021'
           files: |
             LICENSE
             ftp_action/index.html
