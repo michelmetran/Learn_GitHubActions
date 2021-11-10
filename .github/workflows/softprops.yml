@@ -5,9 +5,6 @@ name: Create Release
 on: push
 
 
-
-
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,6 +16,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:             # Optional
           name: 'data'
+          body: 'Dados do InfoÁguas obtidos em 25.10.2021'
           files: |
             LICENSE
             ftp_action/index.html
