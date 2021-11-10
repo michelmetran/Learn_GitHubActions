@@ -2,6 +2,7 @@
 # Funciona bem, porém para cada release, dá um erro no VsCode
 # Erro: would clobber existing tag
 # Solução: git fetch --tags -f
+# Just uncheck Fetch all Tags when pulling in preference Git: Pull Tags
 
 name: 'my-release'
 
