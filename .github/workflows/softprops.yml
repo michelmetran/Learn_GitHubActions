@@ -9,11 +9,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: dddd
+
+      - name: Delete Release
+        # Deletar Release
+      
         uses: dev-drprasad/delete-tag-and-release@v0.2.0
         with:
           delete_release: true # default: false
-          tag_name: v1.5 # tag name to delete
+          tag_name: 1.0 # tag name to delete
           #repo: michelmetran/<repoName> # target repo (optional). defaults to repo running this action
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
