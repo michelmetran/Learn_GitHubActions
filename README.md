@@ -1,5 +1,7 @@
 # GitHub Actions
 
+
+
 <br>
 
 É possível definir ações ao fazer operações nos repositórios utilizando o [Git Actions](https://github.com/marketplace?type=actions).
