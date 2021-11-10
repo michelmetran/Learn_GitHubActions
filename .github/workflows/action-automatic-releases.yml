@@ -1,6 +1,7 @@
-# ...
+# https://github.com/marvinpinto/action-automatic-releases
+# Funciona bem, porém para cada release, dá um erro no VsCode
 # Erro: would clobber existing tag"
-# git fetch --tags -f
+# Solução: git fetch --tags -f
 
 name: 'my-release'
 
