@@ -1,5 +1,6 @@
 # https://github.com/softprops/action-gh-release
 
+
 name: Create Release
 
 on: push
@@ -16,3 +17,4 @@ jobs:
         with:
           files: |
             LICENSE
+            ftp_action/index.html
