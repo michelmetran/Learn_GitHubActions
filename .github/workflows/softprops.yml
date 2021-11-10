@@ -2,9 +2,6 @@
 
 name: Create Release
 
-
-
-
 on:
   push
 
@@ -13,16 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Delete Release
-        # Deletar Release: dai é possível criar uma!
-        # https://github.com/dev-drprasad/delete-tag-and-release
-        uses: dev-drprasad/delete-tag-and-release@v0.2.0
-        with:
-          delete_release: true # default: false
-          #tag_name: 'v1.0' # tag name to delete
-          #repo: <repoOwner>/<repoName> # target repo (optional). defaults to repo running this action
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Delete Release
+      #   uses: dev-drprasad/delete-tag-and-release@v0.2.0
+      #   with:
+      #     delete_release: true # default: false
+      #     #tag_name: 'v1.0' # tag name to delete
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Checkout
         uses: actions/checkout@v2
@@ -35,3 +29,4 @@ jobs:
           files: |
             LICENSE
             ftp_action/index.html
+            
