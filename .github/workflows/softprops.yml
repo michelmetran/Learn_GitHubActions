@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Release
         uses: softprops/action-gh-release@v1
-        #if: startsWith(github.ref, 'refs/tags/') # 
+        if: startsWith(github.ref, 'refs/tags/') # 
         with:             # Optional
           name: 'data'
           body: 'Dados do InfoÁguas obtidos em 25.10.2021'
