@@ -9,7 +9,6 @@
 O presente repositório visa testar algumas ações ao fazer um *push*, além de outras operações, em repositórios!
 
 
-
 <br>
 
 -----
