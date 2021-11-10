@@ -1,3 +1,5 @@
+# ...
+
 name: 'my-release'
 
 on:
@@ -11,15 +13,13 @@ jobs:
     runs-on: 'ubuntu-latest'
 
     steps:
-      # ...
-      - name: 'Build & test'
-        run: |
-          echo 'done!'
+      - name: Checkout
+        uses: actions/checkout@v2
 
       - uses: 'marvinpinto/action-automatic-releases@latest'
         with:
           repo_token: '${{ secrets.GITHUB_TOKEN }}'
-          automatic_release_tag: 'latest'
+          automatic_release_tag: 'data'
           prerelease: false
           title: 'Development Build'
           files: |

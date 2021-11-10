@@ -1,4 +1,8 @@
 # https://github.com/softprops/action-gh-release
+# Notei que só aceita pushs com tags
+# Notei que ele escreve apenas uma release e não há como sobrepor
+# Faz-se necessário criar outra tag e inserir novo arquivo.
+
 
 name: Create Release
 
