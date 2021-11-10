@@ -1,4 +1,6 @@
 # ...
+# Erro: would clobber existing tag"
+# git fetch --tags -f
 
 name: 'my-release'
 
@@ -26,4 +28,4 @@ jobs:
             LICENSE
             ftp_action/index.html
             README.md
-            
+
