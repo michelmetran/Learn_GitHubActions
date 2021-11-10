@@ -2,13 +2,12 @@
 
 name: Releases
 
-
 on: 
   push:
     tags:
     - '*'
-    branches:
-    - 'main'
+    # branches:
+    # - 'main'
 
 jobs:
 
