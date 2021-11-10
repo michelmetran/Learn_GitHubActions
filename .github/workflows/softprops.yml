@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      # - name: Delete Release
-      #   uses: dev-drprasad/delete-tag-and-release@v0.2.0
-      #   with:
-      #     delete_release: true # default: false
-      #     #tag_name: 'v1.0' # tag name to delete
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Delete Release
+        uses: dev-drprasad/delete-tag-and-release@v0.2.0
+        with:
+          delete_release: true # default: false
+          #tag_name: 'v1.0' # tag name to delete
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Checkout
         uses: actions/checkout@v2
@@ -24,9 +24,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/') #
         with:             # Optional
-          #name: 'data'
-          #body: 'Dados do InfoÁguas obtidos em 25.10.2021'
+          name: 'data'
+          body: 'Dados do InfoÁguas obtidos em 25.10.2021'
           files: |
             LICENSE
             ftp_action/index.html
-            
