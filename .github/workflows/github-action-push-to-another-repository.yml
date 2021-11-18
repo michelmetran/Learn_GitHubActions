@@ -33,7 +33,8 @@ jobs:
           destination-github-username: 'michelmetran'
           destination-repository-name: 'github_actions_output'
           target-branch: main
-          target-directory: ss
+          #target-directory: ss Se não existe, é criado!
+          target-directory: .
 
           commit-message: See ORIGIN_COMMIT from $GITHUB_REF
 
