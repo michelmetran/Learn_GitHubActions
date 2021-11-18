@@ -1,6 +1,9 @@
 # Ignora arquivos
 *.*                 export-ignore
 
+# Ignora arquivos
+/*                  export-ignore
+
 # exclude .gitignore and similar from the generated tarball
 .git*               export-ignore
 
