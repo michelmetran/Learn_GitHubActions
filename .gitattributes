@@ -1,2 +1,2 @@
-/ export-ignore
-/ftp_action/ export-ignore
+* export-ignore         # Ignora arquivos
+/ftp_action/ export-ignore         # Ignora a pasta
