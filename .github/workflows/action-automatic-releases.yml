@@ -3,6 +3,8 @@
 # Erro: would clobber existing tag
 # Solução: git fetch --tags -f
 # Just uncheck Fetch all Tags when pulling in preference Git: Pull Tags
+# Descobri também que é possível excluir arquivos usando o ".gitattributes"
+# https://stackoverflow.com/questions/50059612/how-to-ignore-some-files-in-release-with-git
 
 name: 'my-release'
 
@@ -31,5 +33,5 @@ jobs:
             ftp_action/index.html
             README.md
 
-            
+
 
