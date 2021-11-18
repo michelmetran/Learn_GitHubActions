@@ -1,2 +1,8 @@
-* export-ignore         # Ignora arquivos
-/ftp_action/ export-ignore         # Ignora a pasta
+# Ignora arquivos
+*.*                 export-ignore
+
+# exclude .gitignore and similar from the generated tarball
+.git*               export-ignore
+
+# Ignora a pasta
+/ftp_action/        export-ignore         
