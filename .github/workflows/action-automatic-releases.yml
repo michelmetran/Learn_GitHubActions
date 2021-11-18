@@ -6,7 +6,6 @@
 
 name: 'my-release'
 
-
 on:
   push:
     branches:
@@ -31,4 +30,6 @@ jobs:
             LICENSE
             ftp_action/index.html
             README.md
+
+            
 
