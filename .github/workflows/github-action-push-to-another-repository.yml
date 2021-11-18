@@ -27,11 +27,15 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source-directory: 'ftp_action'
+          user-name: Michel Metrans
+          user-email: michelmetran@gmail.com
+
           destination-github-username: 'michelmetran'
           destination-repository-name: 'github_actions_output'
-          user-email: michelmetran@gmail.com
-          commit-message: See ORIGIN_COMMIT from $GITHUB_REF
           target-branch: main
+          target-directory: ss
+
+          commit-message: See ORIGIN_COMMIT from $GITHUB_REF
 
       - name: Test get variable exported by push-to-another-repository
         run: echo $DESTINATION_CLONED_DIRECTORY
