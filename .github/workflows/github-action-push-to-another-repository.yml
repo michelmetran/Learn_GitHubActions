@@ -34,7 +34,7 @@ jobs:
           destination-repository-name: 'github_actions_output'
           target-branch: main
           #target-directory: ss Se não existe, é criado!
-          target-directory: .
+          target-directory: /
 
           commit-message: See ORIGIN_COMMIT from $GITHUB_REF
 
