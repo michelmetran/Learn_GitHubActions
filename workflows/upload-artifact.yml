@@ -16,7 +16,7 @@ jobs:
       - name: Step 1 - Create a temporary artifact downloads folder
         run: mkdir downloads
         
-      - name: step 2 - Add artifacts to publish to the temp folder
+      - name: Step 2 - Add artifacts to publish to the temp folder
         run: |
           cd downloads
           echo 'alpha'    > alpha.html
