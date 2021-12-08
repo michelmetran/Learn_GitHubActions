@@ -1,3 +1,7 @@
+# References
+# https://github.community/t/how-to-setup-github-actions-to-run-my-python-script-on-schedule/18335/2
+
+
 name: py
 
 on:
@@ -23,5 +27,3 @@ jobs:
       # - name: export index
       #   .... # use crosponding script or actions to help export.
 
-# References
-# https://github.community/t/how-to-setup-github-actions-to-run-my-python-script-on-schedule/18335/2
