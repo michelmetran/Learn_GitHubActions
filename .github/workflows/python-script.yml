@@ -31,6 +31,6 @@ jobs:
         run: |
           python ./script/hello_world.py
         env:
-          key: ${{ secrets.FTP_SERVER }} # if run.py requires passwords..etc, set it as secrets
+          CREDENTIAL: ${{ secrets.FTP_SERVER }} # if run.py requires passwords..etc, set it as secrets
       # - name: export index
       #   .... # use crosponding script or actions to help export.
