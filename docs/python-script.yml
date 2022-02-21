@@ -29,7 +29,7 @@ jobs:
 
       - name: execute py script # run the run.py to get the latest data
         run: |
-          python ./script/hello_world.py
+          python ./src/hello_world.py
         env:
           CREDENTIAL: ${{ secrets.FTP_SERVER }} # if run.py requires passwords..etc, set it as secrets
       # - name: export index

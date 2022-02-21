@@ -16,7 +16,7 @@ O presente repositório visa testar algumas ações ao fazer um *push*, além de
 
 Ao fazer um *push*, é possível replicar o conteúdo para um **FTP**. Apenas para testar criei um *site gratuito* usando o [br.000webhost.com](https://br.000webhost.com/), que disponibiliza um *FTP Server* gratuito.
 
-- [Deploy Automático com GITHUB ACTIONS em Hospedagem Compartilhada em 12 minutos](https://www.youtube.com/watch?v=3cLbh-k2qKk)
+- [Deploy Automático com GitHub Actions em Hospedagem Compartilhada em 12 minutos](https://www.youtube.com/watch?v=3cLbh-k2qKk)
 - [GitHub Action FTP Deploy](https://github.com/marketplace/actions/ftp-deploy)
 - [Site](https://djangotestmiche.000webhostapp.com/)
 
@@ -48,12 +48,6 @@ Quando um usuário interagir (criando um *Issue* ou *Pull Request*), receberá u
 
 No projeto que fiz, sobre o [gerador_endereco](https://github.com/open-dsa/gerador_endereco) usei um Git Action que cria um pacote no PyPi!, o repositório oficial do Python.
 
------
-
-## Referências
-
-- https://github.com/dmnemec/copy_file_to_another_repo_action
-
 <br>
 
 -----
@@ -64,3 +58,13 @@ Com auxílio do GitAction *python-script.yml* é possível executar um código e
 
 Observações:
 - Roda em repositório privado!
+
+<br>
+
+-----
+
+## Referências
+
+- https://github.com/dmnemec/copy_file_to_another_repo_action
+
+<br>
