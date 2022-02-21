@@ -16,7 +16,7 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_file: './data/ftp_action/css/css.cssmd'
+        source_file: './data/ftp_action/css/css.css'
         destination_repo: 'michelmetran/github_actions_output'
         destination_folder: 'test-dir'
         user_email: 'michelmetran@email.com'
