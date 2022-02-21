@@ -1,7 +1,5 @@
 # GitHub Actions
 
-
-
 <br>
 
 É possível definir ações ao fazer operações nos repositórios utilizando o [Git Actions](https://github.com/marketplace?type=actions).
@@ -50,5 +48,19 @@ Quando um usuário interagir (criando um *Issue* ou *Pull Request*), receberá u
 
 No projeto que fiz, sobre o [gerador_endereco](https://github.com/open-dsa/gerador_endereco) usei um Git Action que cria um pacote no PyPi!, o repositório oficial do Python.
 
+-----
 
+## Referências
 
+- https://github.com/dmnemec/copy_file_to_another_repo_action
+
+<br>
+
+-----
+
+## Python
+
+Com auxílio do GitAction *python-script.yml* é possível executar um código em python, utilizando algum código presente no repositório.
+
+Observações:
+- Roda em repositório privado!
