@@ -1,7 +1,9 @@
 # This is a basic workflow to help you get started with Actions
 # https://github.com/cpina/push-to-another-repository-output
 # https://github.com/marketplace/actions/push-directory-to-another-repository
+# https://github.com/cpina/github-action-push-to-another-repository/issues/47
 # https://dev.to/tomassirio/make-changes-on-repository-a-while-modifying-repository-b-github-actions-is-here-50g8
+# Funciona se colocar a API como Secret do Repositório!!!!
 
 name: CI
 
@@ -27,7 +29,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: 'ftp_action'
+          source-directory: 'data/ftp_action'
           user-name: michelmetran
           user-email: michelmetran@gmail.com
 

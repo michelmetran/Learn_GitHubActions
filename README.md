@@ -8,6 +8,27 @@ O presente repositório visa testar algumas ações ao fazer um *push*, além de
 
 <br>
 
+## Repositórios de Testes
+
+https://github.com/michelmetran/github_actions_personal
+<br>
+https://github.com/michelmetran/github_actions_personal_output
+<br>
+https://github.com/open-dsa/github_actions_org_private
+<br>
+https://github.com/open-dsa/github_actions_org_public
+
+<br>
+
+----
+
+## Glossário
+
+PAC token (Personal Access)
+PAT token (Personal Access Token)
+
+<br>
+
 -----
 
 ## FTP
@@ -68,3 +89,10 @@ Observações:
 - ...
 
 <br>
+
+## Token
+
+Descobri que se eu "sobrepor" o token eu consigo copiar entre repositórios privados!!!!!!!!!!!!!!!!
+
+
+![](https://i.imgur.com/itPNspB.png)
