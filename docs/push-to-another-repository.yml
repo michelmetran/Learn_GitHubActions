@@ -3,7 +3,13 @@
 # https://github.com/marketplace/actions/push-directory-to-another-repository
 # https://github.com/cpina/github-action-push-to-another-repository/issues/47
 # https://dev.to/tomassirio/make-changes-on-repository-a-while-modifying-repository-b-github-actions-is-here-50g8
-# Funciona se colocar a API como Secret do Repositório!!!!
+
+# Dá pra jogar conteudo de um repo privado para um publico...
+# Funciona se colocar a API como Secret do Repositório!!, sobrepondo ao secret da org.
+
+# Deu certo quando estava dentro da mesma organização...
+# Aparentemente, quando se está entre organizações, não vai...
+# Mudei o repositório de "dono" e deu!, voltei a tentar publicar do Open Para o GAEMA e, até agora, deu ruim!!
 
 name: CI
 
