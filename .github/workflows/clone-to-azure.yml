@@ -45,7 +45,8 @@ jobs:
       - name: Outros
         run: |
           git remote update
-          git merge azure/main
+          #git merge azure/main
+          git merge main
           git push origin main
         # env:
         #   AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
