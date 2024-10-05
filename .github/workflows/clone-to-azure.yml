@@ -30,21 +30,22 @@ jobs:
       - run: |
           pwd
           ls -la
+          rm -rf .git          
 
-      - name: Clone GitHub Repository
-        run: |
-          pwd
-          mkdir github_repo
-          cd github_repo          
-          git clone https://github.com/michelmetran/github_actions_personal.git
-          pwd
-          ls -la
+      # - name: Clone GitHub Repository
+      #   run: |
+      #     pwd
+      #     mkdir github_repo
+      #     cd github_repo          
+      #     git clone https://github.com/michelmetran/github_actions_personal.git
+      #     pwd
+      #     ls -la
 
-          # Exclui .git folder
-          cd github_actions_personal
-          rm -rf .git
-          cd ..
-          cd ..
+      #     # Exclui .git folder
+      #     cd github_actions_personal
+      #     rm -rf .git
+      #     cd ..
+      #     cd ..
 
       - name: Clone Azure Repository
         run: |
