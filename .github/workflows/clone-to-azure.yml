@@ -17,9 +17,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # - name: Checkout repository
-      #   uses: actions/checkout@v2
-
       - name: Install Git
         run: sudo apt-get install git
 
@@ -27,6 +24,12 @@ jobs:
         run: |
           git config --global user.email "bot@github.com"
           git config --global user.name "Bot"
+
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - run: |
+          pwd
+          ls -la
 
       - name: Clone GitHub Repository
         run: |
