@@ -30,19 +30,20 @@ jobs:
 
       - name: Clone Repository
         run: |
-          #git clone $AZURE_DEVOPS_URL
-          git clone https://github.com/michelmetran/github_actions_personal.git
+          git clone $AZURE_DEVOPS_URL
+          #git clone https://github.com/michelmetran/github_actions_personal.git
         env:
           AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
   
       - name: Get Inside Folder
         run: |
-          cd github_actions_personal
+          #cd github_actions_personal
+          cd teste_action_clone
 
       - name: Add remote
         run: |
-          #git remote add azure https://github.com/michelmetran/github_actions_personal.git
-          git remote add azure $AZURE_DEVOPS_URL
+          git remote add azure https://github.com/michelmetran/github_actions_personal.git
+          #git remote add azure $AZURE_DEVOPS_URL
         env:
           AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
 
@@ -52,7 +53,7 @@ jobs:
 
       - name: Git Merge
         run: |
-          #git merge azure/main
+          # git merge azure/main
           git merge main
 
       - name: Outros        
@@ -61,3 +62,4 @@ jobs:
         # env:
         #   AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
           #AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
+
