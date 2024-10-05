@@ -67,6 +67,8 @@ jobs:
 
       - name: Git Add
         run: |
+          pwd
+          ls -la
           git add .
 
       - name: Git Commit
