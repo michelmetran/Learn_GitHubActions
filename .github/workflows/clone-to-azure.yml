@@ -23,7 +23,9 @@ jobs:
         run: sudo apt-get install git
       
       - name: Setup Git
-        run:  git config --global user.email "you@example.com" && git config --global user.name "Your Name"
+        run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
 
       - name: Clone repository Azure DevOps
         run: |
@@ -38,6 +40,9 @@ jobs:
       - name: Add remote
         run: |
           git remote add azure git@github.com:michelmetran/github_actions_personal.git
+
+      - name: Outros
+        run: |
           git remote update
           git merge azure/main
           git push origin main
