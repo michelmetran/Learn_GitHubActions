@@ -1,0 +1,36 @@
+# References
+# https://github.community/t/how-to-setup-github-actions-to-run-my-python-script-on-schedule/18335/2
+# https://canovasjm.netlify.app/2020/11/29/github-actions-run-a-python-script-on-schedule-and-commit-changes/
+
+name: py
+
+on:
+  push:
+  schedule:
+    - cron: '0 0 * * *' # Runs at 00:00 UTC everyday
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content to github runner.
+
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8 #install the python needed
+
+      - name: install python packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: execute py script # run the run.py to get the latest data
+        run: |
+          python ./src/hello_world.py
+        env:
+          CREDENTIAL: ${{ secrets.FTP_SERVER }} # if run.py requires passwords..etc, set it as secrets
+      # - name: export index
+      #   .... # use crosponding script or actions to help export.
