@@ -1,5 +1,0 @@
-pytz
-pandas>=1.0.0
-requests
-selenium>=3.14.0
-plotly
