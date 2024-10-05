@@ -71,14 +71,9 @@ jobs:
           pwd
           ls -la
           git add .
-
-      - name: Git Commit
-        run: |
           git commit -m "Sync from git to azure"
-
-      - name: Git Push
-        run: |
           git push
+          
 
       # - name: Add remote
       #   run: |
