@@ -56,8 +56,9 @@ jobs:
           cd $GITHUB_WORKSPACE/devops/${{ GITHUB.EVENT.REPOSITORY.NAME }}/
 
           git add .
-          git commit -m "Sync from $URL/$REPO"
+          #git commit -m "Sync from $URL/$REPO"
+          git commit -m "Sync Repo"
           git push
         env:
           URL: ${{ GITHUB.SERVER_URL }}
-          REPO: ${{ GITHUB.REPOSITORY }}          
+          REPO: ${{ GITHUB.REPOSITORY }}
