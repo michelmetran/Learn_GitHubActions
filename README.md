@@ -5,7 +5,7 @@
 É possível definir ações ao fazer operações nos repositórios utilizando o [Git Actions](https://github.com/marketplace?type=actions).
 
 O presente repositório visa testar algumas ações ao fazer um _push_, além de outras operações, em repositórios!
-dd
+
 <br>
 
 ## Repositórios de Testes
