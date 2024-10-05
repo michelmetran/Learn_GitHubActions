@@ -1,0 +1,95 @@
+# Clonar repo do GitHub para repo do Azure
+# https://medium.com/@saad-awais/sync-one-repository-with-another-using-github-actions-1f349eed5173
+# https://stackoverflow.com/questions/61229061/how-to-synchronize-github-and-azure-devops-repository
+# Michel Metran
+# Data: 05.10.2024
+# Atualizado em: 05.10.2024
+
+name: Clone to Azure DevOps
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  clone:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Git
+        run: sudo apt-get install git
+
+      - name: Setup Git
+        run: |
+          git config --global user.email "bot@github.com"
+          git config --global user.name "Bot"
+
+      - name: Clone GitHub Repository
+        run: |
+          pwd
+          mkdir github_repo
+          cd github_repo          
+          git clone https://github.com/michelmetran/github_actions_personal.git
+          pwd
+          ls -la
+
+          # Exclui .git folder
+          cd github_actions_personal
+          rm -rf .git
+          cd ..
+          cd ..          
+
+      - name: Clone Azure Repository
+        run: |
+          pwd
+          mkdir devops_repo
+          cd devops_repo
+          git clone $AZURE_DEVOPS_URL
+          pwd
+          ls -la
+
+          cd ..
+
+        env:
+          AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
+
+      - name: Copy
+        run: |
+          pwd
+          cp -r github_repo/github_actions_personal/* devops_repo/teste_action_clone/
+          # Entra na pasta
+          cd devops_repo/teste_action_clone/
+          ls -la
+          pwd
+
+      - name: Git Add
+        run: |
+          git add .
+
+      - name: Git Commit
+        run: |
+          git commit -m "Sync from git to azure"
+
+      - name: Git Push
+        run: |
+          git push
+
+      # - name: Add remote
+      #   run: |
+      #     git remote add azure https://github.com/michelmetran/github_actions_personal.git
+
+      # - name: Git Update
+      #   run: |
+      #     git remote update
+
+      # - name: Git Merge
+      #   run: |
+      #     git merge azure/main
+
+      # - name: Outros
+      #   run: |
+      #     git push origin main
