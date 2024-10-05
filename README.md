@@ -1,6 +1,6 @@
 # GitHub Actions
 
-<br>
+[![Repo](https://img.shields.io/badge/GitHub-repo-blue?logo=github&logoColor=f5f5f5)](https://github.com/michelmetran/github_actions_personal)
 
 É possível definir ações ao fazer operações nos repositórios utilizando o [Git Actions](https://github.com/marketplace?type=actions).
 
@@ -28,7 +28,7 @@ O presente repositório visa testar algumas ações ao fazer um _push_, além de
 
 ---
 
-##
+## Actions
 
 ### FTP
 
@@ -108,5 +108,3 @@ Descobri que se eu "sobrepor" o token eu consigo copiar entre repositórios priv
 ## Referências
 
 - https://github.com/peter-evans/create-pull-request (Estudar)
-
-<br>

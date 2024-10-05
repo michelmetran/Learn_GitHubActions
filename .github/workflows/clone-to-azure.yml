@@ -1,0 +1,33 @@
+# Clonar repo do GitHub para repo do Azure
+# 
+# Michel Metran
+# Data: 05.10.2024
+# Atualizado em: 05.10.2024
+
+name: Clone to Azure DevOps
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  clone:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Git
+        run: sudo apt-get install git
+
+      - name: Clone repository to Azure DevOps
+        env:
+          AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
+          AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
+        run: |
+          git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+          cd SEU_REPOSITORIO
+          git remote add azure $AZURE_DEVOPS_URL
+          git push azure --all
