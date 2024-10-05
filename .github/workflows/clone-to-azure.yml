@@ -6,9 +6,6 @@
 
 name: Clone to Azure DevOps
 
-
-
-
 on:
   push:
     branches:
@@ -27,7 +24,7 @@ jobs:
       - run: git config --global user.email "you@example.com"
       - run: git config --global user.name "Your Name"
 
-      - name: Clone repository to Azure DevOps          
+      - name: Clone repository to Azure DevOps
         run: |
           git clone https://github.com/michelmetran/github_actions_personal.git
 
@@ -41,4 +38,4 @@ jobs:
           git push azure --all
         env:
           AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
-          AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
+          #AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
