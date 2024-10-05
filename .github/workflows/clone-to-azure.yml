@@ -41,7 +41,7 @@ jobs:
           cd github_actions_personal
           rm -rf .git
           cd ..
-          cd ..          
+          cd ..
 
       - name: Clone Azure Repository
         run: |
@@ -70,11 +70,10 @@ jobs:
           cd devops_repo/teste_action_clone/
           pwd
           ls -la
-          
+
           git add .
           git commit -m "Sync from git to azure"
           git push
-          
 
       # - name: Add remote
       #   run: |
