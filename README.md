@@ -23,7 +23,6 @@ sasasas
 
 ## Glossário
 
-- PAC token (Personal Access)
 - PAT token (Personal Access Token)
 
 <br>

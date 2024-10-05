@@ -30,6 +30,7 @@ jobs:
 
       - name: Clone GitHub Repository
         run: |
+          pwd
           mkdir github_repo
           cd github_repo
           git clone https://github.com/michelmetran/github_actions_personal.git
@@ -38,22 +39,27 @@ jobs:
           rm -rf .git
           cd ..
           cd ..
+          pwd
 
       - name: Clone Azure Repository
         run: |
+          pwd
           mkdir devops_repo
           cd devops_repo
           git clone $AZURE_DEVOPS_URL
           cd ..
+          pwd
 
         env:
           AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
 
       - name: Copy
         run: |
+          pwd
           cp -r github_repo/github_actions_personal/* devops_repo/teste_action_clone/
           # Entra na pasta
           cd devops_repo/teste_action_clone/
+          ls -la
           pwd
 
       - name: Git Add
