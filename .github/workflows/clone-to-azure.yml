@@ -51,7 +51,6 @@ jobs:
           git clone $AZURE_DEVOPS_URL
           pwd
           ls -la
-
           cd ..
 
         env:
