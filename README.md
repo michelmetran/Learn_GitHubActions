@@ -6,8 +6,6 @@
 
 O presente repositório visa testar algumas ações ao fazer um _push_, além de outras operações, em repositórios!
 
-
-ddd
 <br>
 
 ## Repositórios de Testes

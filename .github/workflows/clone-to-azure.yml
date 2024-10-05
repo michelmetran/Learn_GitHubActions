@@ -1,4 +1,5 @@
 # Clonar repo do GitHub para repo do Azure
+# Necessário que os repos tenham o mesmo nome
 # https://medium.com/@saad-awais/sync-one-repository-with-another-using-github-actions-1f349eed5173
 # https://stackoverflow.com/questions/61229061/how-to-synchronize-github-and-azure-devops-repository
 # Michel Metran
@@ -24,7 +25,6 @@ jobs:
         run: |
           git config --global user.email "bot@github.com"
           git config --global user.name "Bot"
-          echo ${{ GITHUB.EVENT.REPOSITORY.NAME }}
 
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -39,46 +39,24 @@ jobs:
 
       - name: Clone Azure Repository
         run: |
-          #cd ..
           mkdir $GITHUB_WORKSPACE/devops
           cd $GITHUB_WORKSPACE/devops
           git clone https://$AZURE_DEVOPS_PAT@dev.azure.com/Michel-Silva/MyDevOps/_git/${{ GITHUB.EVENT.REPOSITORY.NAME }}
-          #ls -la
 
         env:
           AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
 
-      - name: Copy
+      - name: Copy Files
         run: |
-          #pwd
           cp -r $GITHUB_WORKSPACE/github/. $GITHUB_WORKSPACE/devops/${{ GITHUB.EVENT.REPOSITORY.NAME }}/
+
+      - name: Git Add, Commit and Push
+        run: |
           # Entra na pasta
           cd $GITHUB_WORKSPACE/devops/${{ GITHUB.EVENT.REPOSITORY.NAME }}/
-          #ls -la
-          #pwd
-
-      - name: Git Add
-        run: |
-          cd $GITHUB_WORKSPACE/devops/${{ GITHUB.EVENT.REPOSITORY.NAME }}/
-          #pwd
-          #ls -la
 
           git add .
-          git commit -m "Sync from git to azure"
+          git commit -m "Sync from $URL"
           git push
-
-      # - name: Add remote
-      #   run: |
-      #     git remote add azure https://github.com/michelmetran/github_actions_personal.git
-
-      # - name: Git Update
-      #   run: |
-      #     git remote update
-
-      # - name: Git Merge
-      #   run: |
-      #     git merge azure/main
-
-      # - name: Outros
-      #   run: |
-      #     git push origin main
+        env:
+          URL: ${{ GITHUB.SERVER_URL }}
