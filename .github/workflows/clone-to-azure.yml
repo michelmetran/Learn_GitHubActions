@@ -27,7 +27,7 @@ jobs:
           AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
           AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
         run: |
-          git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
-          cd SEU_REPOSITORIO
+          git clone https://github.com/michelmetran/github_actions_personal.git
+          cd github_actions_personal
           git remote add azure $AZURE_DEVOPS_URL
           git push azure --all
