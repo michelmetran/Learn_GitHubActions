@@ -56,15 +56,15 @@ jobs:
       - name: Copy
         run: |
           #pwd
-          cp -r $GITHUB_WORKSPACE/github/* $GITHUB_WORKSPACE/devops/teste_action_clone/
+          cp -r $GITHUB_WORKSPACE/github/* $GITHUB_WORKSPACE/devops/${{ GITHUB.EVENT.REPOSITORY.NAME }}/
           # Entra na pasta
-          cd $GITHUB_WORKSPACE/devops/teste_action_clone/
+          cd $GITHUB_WORKSPACE/devops/${{ GITHUB.EVENT.REPOSITORY.NAME }}/
           #ls -la
           #pwd
 
       - name: Git Add
         run: |
-          cd $GITHUB_WORKSPACE/devops/teste_action_clone/
+          cd $GITHUB_WORKSPACE/devops/${{ GITHUB.EVENT.REPOSITORY.NAME }}/
           #pwd
           #ls -la
 
