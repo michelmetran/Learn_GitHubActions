@@ -32,14 +32,16 @@ jobs:
         run: |
           pwd
           mkdir github_repo
-          cd github_repo
+          cd github_repo          
           git clone https://github.com/michelmetran/github_actions_personal.git
+          pwd
+          ls -la
+
           # Exclui .git folder
           cd github_actions_personal
           rm -rf .git
           cd ..
-          cd ..
-          pwd
+          cd ..          
 
       - name: Clone Azure Repository
         run: |
@@ -47,8 +49,10 @@ jobs:
           mkdir devops_repo
           cd devops_repo
           git clone $AZURE_DEVOPS_URL
-          cd ..
           pwd
+          ls -la
+
+          cd ..
 
         env:
           AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
