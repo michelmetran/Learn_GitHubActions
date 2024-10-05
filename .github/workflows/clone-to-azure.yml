@@ -33,15 +33,13 @@ jobs:
 
       - name: Remove .git
         run: |
-          #pwd
-          #ls -la
           cd github
           rm -rf .git
-          #ls -la
+          rm -rf .github
 
       - name: Clone Azure Repository
         run: |
-          cd ..          
+          #cd ..
           mkdir $GITHUB_WORKSPACE/devops
           cd $GITHUB_WORKSPACE/devops
           git clone https://$AZURE_DEVOPS_PAT@dev.azure.com/Michel-Silva/MyDevOps/_git/${{ GITHUB.EVENT.REPOSITORY.NAME }}
@@ -53,7 +51,7 @@ jobs:
       - name: Copy
         run: |
           #pwd
-          cp -r $GITHUB_WORKSPACE/github/* $GITHUB_WORKSPACE/devops/${{ GITHUB.EVENT.REPOSITORY.NAME }}/
+          cp -r $GITHUB_WORKSPACE/github/. $GITHUB_WORKSPACE/devops/${{ GITHUB.EVENT.REPOSITORY.NAME }}/
           # Entra na pasta
           cd $GITHUB_WORKSPACE/devops/${{ GITHUB.EVENT.REPOSITORY.NAME }}/
           #ls -la
