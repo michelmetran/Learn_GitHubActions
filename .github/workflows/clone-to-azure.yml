@@ -37,6 +37,7 @@ jobs:
       - name: Get Inside Folder
         run: |
           cd teste_action_clone
+          rm -rf .git
 
       - name: Add remote
         run: |
