@@ -41,19 +41,13 @@ jobs:
 
       - name: Clone Azure Repository
         run: |
-          #pwd
           cd ..          
-          #echo $GITHUB_WORKSPACE
           mkdir $GITHUB_WORKSPACE/devops
           cd $GITHUB_WORKSPACE/devops
-          #git clone $AZURE_DEVOPS_URL
-          echo dd$AZURE_DEVOPS_URL
-          git clone https://${{ secrets.AZURE_DEVOPS_PAT }}@dev.azure.com/Michel-Silva/MyDevOps/_git/${{ GITHUB.EVENT.REPOSITORY.NAME }}
-          #pwd
+          git clone https://$AZURE_DEVOPS_PAT@dev.azure.com/Michel-Silva/MyDevOps/_git/${{ GITHUB.EVENT.REPOSITORY.NAME }}
           #ls -la
 
         env:
-          AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
           AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
 
       - name: Copy
