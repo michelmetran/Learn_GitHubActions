@@ -27,13 +27,18 @@ jobs:
       - run: git config --global user.email "you@example.com"
       - run: git config --global user.name "Your Name"
 
-      - name: Clone repository to Azure DevOps
-        # env:
-        #   AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
-        #   AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
-          
+      - name: Clone repository to Azure DevOps          
         run: |
           git clone https://github.com/michelmetran/github_actions_personal.git
+
+      - name: Get Inside Folder
+        run: |
           cd github_actions_personal
+
+      - name: Add remote
+        run: |
           git remote add azure $AZURE_DEVOPS_URL
           git push azure --all
+        env:
+          AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
+          AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
