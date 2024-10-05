@@ -36,6 +36,7 @@ jobs:
           ls -la
           cd github
           rm -rf .git
+          ls -la
 
       # - name: Clone GitHub Repository
       #   run: |
@@ -69,7 +70,7 @@ jobs:
       - name: Copy
         run: |
           pwd
-          cp -r github_repo/github_actions_personal/* devops_repo/teste_action_clone/
+          cp -r $GITHUB_WORKSPACE/github/github_actions_personal/* devops_repo/teste_action_clone/
           # Entra na pasta
           cd devops_repo/teste_action_clone/
           ls -la
