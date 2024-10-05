@@ -67,6 +67,7 @@ jobs:
 
       - name: Git Add
         run: |
+          cd devops_repo/teste_action_clone/
           pwd
           ls -la
           git add .
