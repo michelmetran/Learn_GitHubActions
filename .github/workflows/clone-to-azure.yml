@@ -4,8 +4,6 @@
 # Data: 05.10.2024
 # Atualizado em: 05.10.2024
 
-
-
 name: Clone to Azure DevOps
 
 on:
@@ -23,21 +21,26 @@ jobs:
 
       - name: Install Git
         run: sudo apt-get install git
-      - run: git config --global user.email "you@example.com"
-      - run: git config --global user.name "Your Name"
+      
+      - name: Setup Git
+        run:  git config --global user.email "you@example.com" && git config --global user.name "Your Name"
 
-      - name: Clone repository to Azure DevOps
+      - name: Clone repository Azure DevOps
         run: |
-          git clone https://github.com/michelmetran/github_actions_personal.git
-
+          git clone $AZURE_DEVOPS_URL
+        env:
+          AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
+  
       - name: Get Inside Folder
         run: |
-          cd github_actions_personal
+          cd teste_action_clone
 
       - name: Add remote
         run: |
-          git remote add azure $AZURE_DEVOPS_URL
-          git push azure
-        env:
-          AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
+          git remote add azure git@github.com:michelmetran/github_actions_personal.git
+          git remote update
+          git merge azure/main
+          git push origin main
+        # env:
+        #   AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
           #AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}

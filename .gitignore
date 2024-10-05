@@ -1,6 +1,10 @@
 # IDes
 .vscode/
 .idea/
+.vs/
+
+# Pastas
+teste/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

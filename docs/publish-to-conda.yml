@@ -7,15 +7,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@master
+      - uses: actions/checkout@master
 
-    - name: Publish distribution 📦 to Conda
-      #uses: elbeejay/conda-publish-action@v1.5
-      uses: maxibor/conda-package-publish-action@v1.1
-      with:
-        subdir: 'conda'
-        anacondatoken: ${{ secrets.ANACONDA_TOKEN }}
-        platforms: 'win osx linux'
-
-
+      - name: Publish distribution 📦 to Conda
+        #uses: elbeejay/conda-publish-action@v1.5
+        uses: maxibor/conda-package-publish-action@v1.1
+        with:
+          subdir: 'conda'
+          anacondatoken: ${{ secrets.ANACONDA_TOKEN }}
+          platforms: 'win osx linux'
 # Tenho no Arrebol
