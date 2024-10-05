@@ -70,7 +70,7 @@ jobs:
       - name: Copy
         run: |
           pwd
-          cp -r $GITHUB_WORKSPACE/github/* $GITHUB_WORKSPACE/devops_repo/teste_action_clone/
+          cp -r $GITHUB_WORKSPACE/github/* $GITHUB_WORKSPACE/devops/teste_action_clone/
           # Entra na pasta
           cd $GITHUB_WORKSPACE/devops/teste_action_clone/
           ls -la
