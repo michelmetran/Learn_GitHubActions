@@ -28,9 +28,9 @@ jobs:
       - run: git config --global user.name "Your Name"
 
       - name: Clone repository to Azure DevOps
-        env:
-          AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
-          AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
+        # env:
+        #   AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
+        #   AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
           
         run: |
           git clone https://github.com/michelmetran/github_actions_personal.git
