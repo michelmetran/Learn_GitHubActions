@@ -39,7 +39,7 @@ jobs:
 
       - name: Add remote
         run: |
-          git remote add azure git@github.com:michelmetran/github_actions_personal.git
+          git remote add azure https://github.com/michelmetran/github_actions_personal.git
 
       - name: Outros
         run: |
