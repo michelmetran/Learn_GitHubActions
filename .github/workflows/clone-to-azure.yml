@@ -1,6 +1,6 @@
 # Clonar repo do GitHub para repo do Azure
 # https://medium.com/@saad-awais/sync-one-repository-with-another-using-github-actions-1f349eed5173
-#
+# https://stackoverflow.com/questions/61229061/how-to-synchronize-github-and-azure-devops-repository
 # Michel Metran
 # Data: 05.10.2024
 # Atualizado em: 05.10.2024
@@ -25,8 +25,8 @@ jobs:
 
       - name: Setup Git
         run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
+          git config --global user.email "bot@github.com"
+          git config --global user.name "Bot"
 
       - name: Clone GitHub Repository
         run: |
@@ -54,6 +54,7 @@ jobs:
           cp -r github_repo/github_actions_personal/* devops_repo/teste_action_clone/
           # Entra na pasta
           cd devops_repo/teste_action_clone/
+          pwd
 
       - name: Git Add
         run: |
