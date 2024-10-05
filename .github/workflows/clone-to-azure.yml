@@ -41,8 +41,8 @@ jobs:
 
       - name: Clone Azure Repository
         run: |
-          mkdir devops
-          cd devops
+          mkdir devops_repo
+          cd devops_repo
           git clone $AZURE_DEVOPS_URL
           cd ..
 
@@ -51,9 +51,9 @@ jobs:
 
       - name: Copy
         run: |
-          cp -r github_repo/github_actions_personal/* devops/teste_action_clone/
+          cp -r github_repo/github_actions_personal/* devops_repo/teste_action_clone/
           # Entra na pasta
-          cd devops/teste_action_clone/
+          cd devops_repo/teste_action_clone/
 
       - name: Git Add
         run: |
