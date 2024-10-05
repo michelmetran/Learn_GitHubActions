@@ -50,12 +50,14 @@ jobs:
       - name: Clone Azure Repository
         run: |
           pwd
+          cd ..
+          cd ..
+          echo $GITHUB_WORKSPACE
           mkdir devops_repo
           cd devops_repo
           git clone $AZURE_DEVOPS_URL
           pwd
           ls -la
-          cd ..
 
         env:
           AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
