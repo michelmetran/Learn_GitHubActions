@@ -30,57 +30,42 @@ jobs:
         with:
           path: 'github'
 
-      - name: dsdsds
+      - name: Remove .git
         run: |
-          pwd
-          ls -la
+          #pwd
+          #ls -la
           cd github
           rm -rf .git
-          ls -la
-
-      # - name: Clone GitHub Repository
-      #   run: |
-      #     pwd
-      #     mkdir github_repo
-      #     cd github_repo
-      #     git clone https://github.com/michelmetran/github_actions_personal.git
-      #     pwd
-      #     ls -la
-
-      #     # Exclui .git folder
-      #     cd github_actions_personal
-      #     rm -rf .git
-      #     cd ..
-      #     cd ..
+          #ls -la
 
       - name: Clone Azure Repository
         run: |
-          pwd
+          #pwd
           cd ..          
-          echo $GITHUB_WORKSPACE
+          #echo $GITHUB_WORKSPACE
           mkdir $GITHUB_WORKSPACE/devops
           cd $GITHUB_WORKSPACE/devops
           git clone $AZURE_DEVOPS_URL
-          pwd
-          ls -la
+          #pwd
+          #ls -la
 
         env:
           AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
 
       - name: Copy
         run: |
-          pwd
+          #pwd
           cp -r $GITHUB_WORKSPACE/github/* $GITHUB_WORKSPACE/devops/teste_action_clone/
           # Entra na pasta
           cd $GITHUB_WORKSPACE/devops/teste_action_clone/
-          ls -la
-          pwd
+          #ls -la
+          #pwd
 
       - name: Git Add
         run: |
           cd $GITHUB_WORKSPACE/devops/teste_action_clone/
-          pwd
-          ls -la
+          #pwd
+          #ls -la
 
           git add .
           git commit -m "Sync from git to azure"
