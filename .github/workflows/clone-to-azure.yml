@@ -34,6 +34,7 @@ jobs:
         run: |
           pwd
           ls -la
+          cd github
           rm -rf .git
 
       # - name: Clone GitHub Repository
@@ -54,11 +55,10 @@ jobs:
       - name: Clone Azure Repository
         run: |
           pwd
-          cd ..
-          cd ..
+          cd ..          
           echo $GITHUB_WORKSPACE
-          mkdir devops_repo
-          cd devops_repo
+          mkdir $GITHUB_WORKSPACE/devops
+          cd $GITHUB_WORKSPACE/devops
           git clone $AZURE_DEVOPS_URL
           pwd
           ls -la
