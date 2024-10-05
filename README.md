@@ -6,7 +6,7 @@
 
 O presente repositório visa testar algumas ações ao fazer um _push_, além de outras operações, em repositórios!
 
-rewrwerewrewrewsdsadsadsadsadsdsdsd
+sasasas
 
 <br>
 
