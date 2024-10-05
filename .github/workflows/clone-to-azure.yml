@@ -27,16 +27,20 @@ jobs:
 
       - name: Checkout repository
         uses: actions/checkout@v2
-      - run: |
+        with:
+          path: 'github'
+
+      - name: dsdsds
+        run: |
           pwd
           ls -la
-          rm -rf .git          
+          rm -rf .git
 
       # - name: Clone GitHub Repository
       #   run: |
       #     pwd
       #     mkdir github_repo
-      #     cd github_repo          
+      #     cd github_repo
       #     git clone https://github.com/michelmetran/github_actions_personal.git
       #     pwd
       #     ls -la
