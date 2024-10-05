@@ -35,8 +35,7 @@ jobs:
       - name: Add remote
         run: |
           git remote add azure $AZURE_DEVOPS_URL
-          git pull
-          git push azure --all
+          git push azure --force
         env:
           AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
           #AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
