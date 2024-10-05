@@ -24,7 +24,9 @@ jobs:
 
       - name: Install Git
         run: sudo apt-get install git
-
+      - run: git config --global user.email "you@example.com"
+      - run: git config --global user.name "Your Name"
+      
       - name: Clone repository to Azure DevOps
         env:
           AZURE_DEVOPS_URL: ${{ secrets.AZURE_DEVOPS_URL }}
