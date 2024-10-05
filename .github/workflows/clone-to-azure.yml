@@ -70,6 +70,7 @@ jobs:
           cd devops_repo/teste_action_clone/
           pwd
           ls -la
+          
           git add .
           git commit -m "Sync from git to azure"
           git push
